@@ -2,10 +2,8 @@ sudo apt install -y xclip;
 
 zshrc="/home/$USER/.zshrc"
 bashrc="/home/$USER/.bashrc"
-copycat="copycat () {
-  cat \$1;
-  cat \$1 | xclip -selection clipboard;
-}"
+
+copycat="alias copycat='xclip -selection clipboard'"
 
 if [ -f $zshrc ]; then
     echo "zshrc exists.";
